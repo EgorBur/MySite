@@ -15,32 +15,58 @@
 
         body {
          background: url("lenin-oboi.jpg"); /* Цвет фона */ /*background-color: rgb(73, 155, 134);*/
-         background-size: cover;
+         background-size:cover;
+         margin: 0;
+         background-attachment: fixed;
         }
 
         .kart {
-            outline: 5px solid rgb(0, 0, 0);
+            outline: 4px solid rgb(0, 0, 0);
             display: block;
             margin-left: 150px;
         }
         .gif{
-            border: none;
+            outline: 3px solid rgb(208, 36, 36);
             display: block;
             margin-left: 1270px;
-    }
+        }
+        .audgimn{
+            border: none;
+            background: none;
+            margin-left: 1200px;
+            margin-top: 10px;
+        }
 
     </style>
 </head>
 <body>
-    <img src="IoL9U.gif" href = "sssr-gimn.mp3" class = "gif" width=15% height=15%>
+    <button id="ASong" onClick="playPause()">
+        <audio
+          src="sssr-gimn.mp3"
+        ></audio>
+        <img src="IoL9U.gif" class="audgimn" width=200 height=100>
+      </button>
+      
+      <script>
+        var aud = document.getElementById("ASong").children[0];
+        var isPlaying = false;
+        function playPause() {
+          if (isPlaying) {
+            aud.pause();
+          } else {
+            aud.play();
+          }
+          isPlaying = !isPlaying;
+        }
+      </script>
 
 
     <p><span class="letter">В</span>от вам Иосиф Виссарионович:</p>
-    <img src="DBfkoDGnGr4.jpg" class="kart" width=144 height=180>
+    <img src="DBfkoDGnGr4.jpg" class="kart" width="144" height="180">
     
 
 
     <p>Вот вам Владимир Ильич:</p>
-    <img src="WqiRk.jpg" class="kart" width=25% height=25%>
+    <img src="WqiRk.jpg" class="kart" width="25%" height="25%">
 </body>
 </html>

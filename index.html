@@ -9,42 +9,49 @@
          font-size: 200%; /* Размер шрифта */
         } 
         p {
-         color: rgb(255, 196, 0); /* Цвет остального текста */
-         font-size: 150%;
+         color: rgb(255, 101, 101); /* Цвет остального текста 216 230 94*/
+         font-size: 200%;
         }
-
         body {
-         background: url("lenin-oboi.jpg"); /* Цвет фона */ /*background-color: rgb(73, 155, 134);*/
+         
+         background: url("oboikreml.jpg") ; /* Цвет фона */ /*background-color: rgb(73, 155, 134);*/
          background-size:cover;
          margin: 0;
-         background-attachment: fixed;
+         background-attachment: scroll;
         }
-
         .kart {
             outline: 4px solid rgb(0, 0, 0);
             display: block;
-            margin-left: 150px;
+            margin-left: 50px;
+            cursor: pointer;
         }
         .gif{
-            outline: 3px solid rgb(208, 36, 36);
-            display: block;
-            margin-left: 1270px;
+          outline: 3px solid rgb(208, 36, 36);
+          display: block;
+          margin-left: 1270px;
         }
         .audgimn{
-            border: none;
-            background: none;
-            margin-left: 1200px;
-            margin-top: 10px;
+          border: none;
+          background: none;
+          margin-left: 1295px;
+          margin-top: 10px;
+        }
+        .point {
+          cursor: pointer;
+        }
+        .butt1{
+          display: block;
+          margin-left: 140px;
+          background: none;
+          border: none;
         }
 
     </style>
 </head>
 <body>
     <button id="ASong" class="audgimn" onClick="playPause()">
-        <audio
-          src="sssr-gimn.mp3"
-        ></audio>
-        <img src="IoL9U.gif" width=200 height=100>
+        <audio src="sssr-gimn.mp3"></audio>
+        <img src="IoL9U.gif" class="point" width=200 height=100>
       </button>
       
       <script>
@@ -61,9 +68,28 @@
       </script>
 
 
-    <p><span class="letter">В</span>от вам Иосиф Виссарионович:</p>
-    <img src="DBfkoDGnGr4.jpg" class="kart" width="144" height="180">
     
+    
+    <p><button id="BSong" class="butt1" onClick="playmuz()">
+        <audio src="Stalin.mp3"></audio>
+        <img src="DBfkoDGnGr4.jpg" class="kart" width="288" height="360" align = "left" vspace="5" hspace="5">
+        </button>
+        
+        <span class="letter">Иосиф Виссарионович Сталин.</span> 
+        <br>
+        В 1912 году по предложению В. И. Ленина
+        был включён в ЦК РСДРП. Тогда же Иосиф Джугашвили окончательно избрал себе псевдоним «Сталин». Во время Октябрьской революции,
+        Вторым Всероссийским съездом был избран членом ВЦИК и СНК. В 1922 году на Пленуме ЦК РКП(б) был избран членом Оргбюро 
+        и Политбюро ЦК РКП(б), а также Генеральным секретарём ЦК РКП(б) (при нахождении Ленина на должности Председателя СНК СССР).
+        В 1930 году, после ослабления и смерти Ленина, Сталин окончательно вышел победителем из внутрипартийной борьбы, 
+        став руководителем государства.</p>
+        
+          <script>
+            var audio = document.getElementById("BSong").children[0];
+            function playmuz() {
+            audio.play();
+            }
+          </script>
 
 
     <p>Вот вам Владимир Ильич:</p>

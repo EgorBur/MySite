@@ -9,15 +9,14 @@
          font-size: 200%; /* Размер шрифта */
         } 
         p {
-         color: rgb(255, 101, 101); /* Цвет остального текста 216 230 94*/
+         color: rgb(243, 228, 15); /* Цвет остального текста 216 230 94*/
          font-size: 200%;
         }
         body {
-         
-         background: url("oboikreml.jpg") ; /* Цвет фона */ /*background-color: rgb(73, 155, 134);*/
+         background: url("oboi5.jpg"); /* Цвет фона */ /*background-color: rgb(73, 155, 134);*/
          background-size:cover;
-         margin: 0;
-         background-attachment: scroll;
+         background-attachment: fixed;
+         background-repeat: no-repeat;
         }
         .kart {
             outline: 4px solid rgb(0, 0, 0);
@@ -25,15 +24,15 @@
             margin-left: 50px;
             cursor: pointer;
         }
-        .gif{
-          outline: 3px solid rgb(208, 36, 36);
-          display: block;
-          margin-left: 1270px;
+        .butkart {
+            outline: 4px solid rgb(0, 0, 0);
+            display: block;
+            cursor: pointer;
         }
         .audgimn{
           border: none;
           background: none;
-          margin-left: 1295px;
+          margin-left: 87vw;
           margin-top: 10px;
         }
         .point {
@@ -41,9 +40,10 @@
         }
         .butt1{
           display: block;
-          margin-left: 140px;
+          margin-left: 100px;
           background: none;
           border: none;
+          cursor: pointer;
         }
 
     </style>
@@ -70,12 +70,12 @@
 
     
     
-    <p><button id="BSong" class="butt1" onClick="playmuz()">
+        <button id="BSong" class="butt1" onClick="playmuz()">
         <audio src="Stalin.mp3"></audio>
-        <img src="DBfkoDGnGr4.jpg" class="kart" width="288" height="360" align = "left" vspace="5" hspace="5">
+        <img src="DBfkoDGnGr4.jpg" class="butkart" width="288" height="360" align = "right" vspace="5" hspace="5">
         </button>
         
-        <span class="letter">Иосиф Виссарионович Сталин.</span> 
+        <p><span class="letter">Иосиф Виссарионович Сталин.</span> 
         <br>
         В 1912 году по предложению В. И. Ленина
         был включён в ЦК РСДРП. Тогда же Иосиф Джугашвили окончательно избрал себе псевдоним «Сталин». Во время Октябрьской революции,
@@ -91,8 +91,18 @@
             }
           </script>
 
-
     <p>Вот вам Владимир Ильич:</p>
-    <img src="WqiRk.jpg" class="kart" width="25%" height="25%">
-</body>
+    <button id="CSong" class="butt1" onClick="playPause()">
+        <audio src="Lenin.mp3"></audio>
+        <img src="WqiRk.jpg" class="butkart" width="30%">
+      </button>
+      
+      <script>
+        var aud = document.getElementById("CSong").children[0];
+        function playPause(){
+            aud.play();
+          }
+          
+      </script>
+
 </html>
